@@ -25,6 +25,9 @@ stateSpecInstr = xml.dom.minidom.parse(state_Data_Dir + state_Spec_Instr)
  
 # For each State (node) create the appropriate NVRA PDF
 for state in basicStateInfo.getElementsByTagName("State"):
+  # Reset some of our variables
+  englishInstrTxt = ""
+  spanishInstrTxt = ""
  
   ### Begin reading in the state's information
   name = state.getAttribute("name")
@@ -40,6 +43,7 @@ for state in basicStateInfo.getElementsByTagName("State"):
   # Read in the State-Specific Instructions for each language
   for state_inst in stateSpecInstr.getElementsByTagName("State"):
      if name == state_inst.getAttribute("name"):
+        print "\nNames Equal: " + name + state_inst.getAttribute("name")
         for subnode in state_inst.getElementsByTagName("Instructions"):
            lang = subnode.getAttribute("lang")
            if lang == "English":
