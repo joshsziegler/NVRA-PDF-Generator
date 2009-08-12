@@ -55,7 +55,7 @@ if (!$error){
    my @txtArray = convLineToCol ( $maxRegTextWidth, $font, $fontSize, $text);
 
    # Note that txtArray is being passed by reference!
-   writeMultiLineStr( 370, 600, $lineOffset, $font, $boldFont, \@txtArray); 
+   writeMultiLineStr( 320, 710, $lineOffset, $font, $boldFont, \@txtArray); 
 
    # Provide the source file to use as our starting point
    prSinglePage($sourceFile); 

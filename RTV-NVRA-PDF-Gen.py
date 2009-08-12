@@ -77,8 +77,8 @@ for state in basicStateInfo.getElementsByTagName("State"):
      mP = subprocess.Popen (cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
  
      # Generate State-Specific Instructions (uses an external Perl script)
-     cmd = "perl PDF-State_Instructions-Generator.pl"
-     cmd += " " + instrTempl_pg2 + " " + newInstruc_pg2 + " "
+     cmd = "perl PDF-State_Instructions-Generator.pl "
+     cmd += instrTempl_pg2 + " " + newInstruc_pg2 + " "
      if language == "en": 
         cmd += englishInstrTxt 
      elif language == "es":
