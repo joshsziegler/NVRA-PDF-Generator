@@ -1,0 +1,314 @@
+<StateData>
+  <State name="Alabama" abbrv="AL">
+    <Reg_Deadline>Applications must be postmarked or delivered by the eleventh day prior to the election.</Reg_Deadline>
+    <Addr_Line>Office of the Secretary of State</Addr_Line>
+    <Addr_Line>P.O. Box 5616</Addr_Line>
+    <Addr_Line>Montgomery, AL 36103-5616</Addr_Line>
+  </State>
+  <State name="Alaska" abbrv="AK">
+    <Reg_Deadline>30 days before the election.</Reg_Deadline>
+    <Addr_Line>Division of Elections</Addr_Line>
+    <Addr_Line>State of Alaska</Addr_Line>
+    <Addr_Line>PO Box 110017</Addr_Line>
+    <Addr_Line>Juneau, AK 99811-0017</Addr_Line>
+  </State>
+  <State name="Arizona" abbrv="AZ">
+    <Reg_Deadline>29 days before the election.</Reg_Deadline>
+    <Addr_Line>Secretary of State/Elections</Addr_Line>
+    <Addr_Line>1700 W. Washington, 7th Floor</Addr_Line>
+    <Addr_Line>Phoenix, AZ 85007-2888</Addr_Line>
+  </State>
+  <State name="Arkansas" abbrv="AR">
+    <Reg_Deadline>30 days before the election.</Reg_Deadline>
+    <Addr_Line>Secretary of State</Addr_Line>
+    <Addr_Line>Voter Services</Addr_Line>
+    <Addr_Line>P.O. Box 8111</Addr_Line>
+    <Addr_Line>Little Rock, AR 72203-8111</Addr_Line>
+  </State>
+  <State name="California" abbrv="CA">
+    <Reg_Deadline>15 days before the election.</Reg_Deadline>
+    <Addr_Line>Secretary of State</Addr_Line>
+    <Addr_Line>Elections Division</Addr_Line>
+    <Addr_Line>1500 11th Street</Addr_Line>
+    <Addr_Line>Sacramento, CA 95814</Addr_Line>
+  </State>
+  <State name="Colorado" abbrv="CO">
+    <Reg_Deadline>29 days before the election. If the application is received in the mails without a postmark, it must be received within 5 days of the close of registration.</Reg_Deadline>
+    <Addr_Line>Colorado Secretary of State</Addr_Line>
+    <Addr_Line>1700 Broadway, Suite 270</Addr_Line>
+    <Addr_Line>Denver, Colorado 80290</Addr_Line>
+  </State>
+  <State name="Connecticut" abbrv="CT">
+    <Reg_Deadline>14 days before the election.</Reg_Deadline>
+    <Addr_Line>Secretary of State</Addr_Line>
+    <Addr_Line>Elections Division</Addr_Line>
+    <Addr_Line>30 Trinity Street</Addr_Line>
+    <Addr_Line>Hartford, CT 06106</Addr_Line>
+  </State>
+  <State name="Delaware" abbrv="DE">
+    <Reg_Deadline>The 4th Saturday before a primary or general election, and 10 days before a special election.</Reg_Deadline>
+    <Addr_Line>Commissioner of Elections</Addr_Line>
+    <Addr_Line>111 S. West St., Suite 10</Addr_Line>
+    <Addr_Line>Dover, DE 19904</Addr_Line>
+  </State>
+  <State name="District of Columbia" abbrv="DC">
+    <Reg_Deadline>30 days before the election.</Reg_Deadline>
+    <Addr_Line>District of Columbia Board of</Addr_Line>
+    <Addr_Line>Elections and  Ethics</Addr_Line>
+    <Addr_Line>441 4th Street, NW, Suite 250</Addr_Line>
+    <Addr_Line>Washington, DC 20001-2745</Addr_Line>
+  </State>
+  <State name="Florida" abbrv="FL">
+    <Reg_Deadline>29 days before the election.</Reg_Deadline>
+    <Addr_Line>Department of State - Division of Elections</Addr_Line>
+    <Addr_Line>The R.A. Gray Building</Addr_Line>
+    <Addr_Line>500 South Bronough St, Rm 316</Addr_Line>
+    <Addr_Line>Tallahassee, FL 323990-0250</Addr_Line>
+  </State>
+  <State name="Georgia" abbrv="GA">
+    <Reg_Deadline>5th Monday before the election or the 5th day after the call for special elections.</Reg_Deadline>
+    <Addr_Line>Elections Division - Office of the Secretary of State</Addr_Line>
+    <Addr_Line>1104 West Tower</Addr_Line>
+    <Addr_Line>2 Martin Luther King, Jr. Dr. SE</Addr_Line>
+    <Addr_Line>Atlanta, GA 30334-1505</Addr_Line>
+  </State>
+  <State name="Hawaii" abbrv="HI">
+    <Reg_Deadline>30 days before the election.</Reg_Deadline>
+    <Addr_Line>Office of Elections</Addr_Line>
+    <Addr_Line>State of Hawaii</Addr_Line>
+    <Addr_Line>802 Lehua Avenue</Addr_Line>
+    <Addr_Line>Pearl City, HI 96782</Addr_Line>
+  </State>
+  <State name="Idaho" abbrv="ID">
+    <Reg_Deadline>25 days before the election.</Reg_Deadline>
+    <Addr_Line>Secretary of State</Addr_Line>
+    <Addr_Line>P.O. Box 83720</Addr_Line>
+    <Addr_Line>State Capitol Bldg.</Addr_Line>
+    <Addr_Line>Boise, ID 83720-0080</Addr_Line>
+  </State>
+  <State name="Illinois" abbrv="IL">
+    <Reg_Deadline>28 days prior to each election.</Reg_Deadline>
+    <Addr_Line>Election Division</Addr_Line>
+    <Addr_Line>Office of the Secretary of State</Addr_Line>
+    <Addr_Line>302 West Washington Street, Room E-204</Addr_Line>
+    <Addr_Line>Indianapolis, IN 46204-2743</Addr_Line>
+  </State>
+  <State name="Iowa" abbrv="IA">
+    <Reg_Deadline>Must be delivered by 5 p.m. 10 days before the election, if it is a state primary or general election; 11 days before all others. Registration forms which are postmarked 15 or more days before an election are considered on time even if received after the deadline.</Reg_Deadline>
+    <Addr_Line>Elections Division - Office of the Secretary of State</Addr_Line>
+    <Addr_Line>Lucas Building-1st Floor</Addr_Line>
+    <Addr_Line>321 E. 12th Street</Addr_Line>
+    <Addr_Line>Des Moines, IA 50319</Addr_Line>
+  </State>
+  <State name="Kansas" abbrv="KS">
+    <Reg_Deadline>Postmarked or delivered 15 days before the election.</Reg_Deadline>
+    <Addr_Line>Secretary of State</Addr_Line>
+    <Addr_Line>1st Floor, Memorial Hall</Addr_Line>
+    <Addr_Line>120 SW 10th Ave.</Addr_Line>
+    <Addr_Line>Topeka, KS 66612-1594</Addr_Line>
+  </State>
+  <State name="Kentucky" abbrv="KY">
+    <Reg_Deadline>29 days before the election.</Reg_Deadline>
+    <Addr_Line>State Board of Elections</Addr_Line>
+    <Addr_Line>140 Walnut Street</Addr_Line>
+    <Addr_Line>Frankfort, KY 40601-3240</Addr_Line>
+  </State>
+  <State name="Louisiana" abbrv="LA">
+    <Reg_Deadline>30 days before the election.</Reg_Deadline>
+    <Addr_Line>Secretary of State</Addr_Line>
+    <Addr_Line>Attention: Vote Registration</Addr_Line>
+    <Addr_Line>P.O. Box 94125</Addr_Line>
+    <Addr_Line>Baton Rouge, LA 70804-9125</Addr_Line>
+  </State>
+  <State name="Maine" abbrv="ME">
+    <Reg_Deadline>Delivered 10 business days before the election (or a voter may register in-person up to and including election day).</Reg_Deadline>
+    <Addr_Line>Elections Division</Addr_Line>
+    <Addr_Line>Bureau of Corporations, Elections and Commissions</Addr_Line>
+    <Addr_Line>101 State House Station</Addr_Line>
+    <Addr_Line>Augusta, ME 04333-0101</Addr_Line>
+  </State>
+  <State name="Maryland" abbrv="MD">
+    <Reg_Deadline>9:00 PM 21 days before the election.</Reg_Deadline>
+    <Addr_Line>State Board of Elections</Addr_Line>
+    <Addr_Line>P.O. Box 6486</Addr_Line>
+    <Addr_Line>Annapolis, MD 21401-0486</Addr_Line>
+  </State>
+  <State name="Massachusetts" abbrv="MA">
+    <Reg_Deadline>20 days before the election.</Reg_Deadline>
+    <Addr_Line>Secretary of the Commonwealth</Addr_Line>
+    <Addr_Line>Elections Division, Room 1705</Addr_Line>
+    <Addr_Line>One Ashburton Place</Addr_Line>
+    <Addr_Line>Boston, MA 02108</Addr_Line>
+  </State>
+  <State name="Michigan" abbrv="MI">
+    <Reg_Deadline>30 days before the election.</Reg_Deadline>
+    <Addr_Line>Michigan Department of State</Addr_Line>
+    <Addr_Line>Bureau of Elections</Addr_Line>
+    <Addr_Line>P.O. Box 20126</Addr_Line>
+    <Addr_Line>Lansing, MI 48901-0726</Addr_Line>
+  </State>
+  <State name="Minnesota" abbrv="MN">
+    <Reg_Deadline>Delivered by 5 PM 21 days before the election (there is also election day registration at polling places).</Reg_Deadline>
+    <Addr_Line>Secretary of State</Addr_Line>
+    <Addr_Line>60 Empire Drive, Suite 100</Addr_Line>
+    <Addr_Line>St. Paul, MN 55103-1855</Addr_Line>
+  </State>
+  <State name="Mississippi" abbrv="MS">
+    <Reg_Deadline>30 days before the election.</Reg_Deadline>
+    <Addr_Line>Secretary of State</Addr_Line>
+    <Addr_Line>P.O. Box 136</Addr_Line>
+    <Addr_Line>Jackson, MS 39205-0136</Addr_Line>
+  </State>
+  <State name="Missouri" abbrv="MO">
+    <Reg_Deadline>28 das before the election.</Reg_Deadline>
+    <Addr_Line>Secretary of State</Addr_Line>
+    <Addr_Line>P.O. Box 1767</Addr_Line>
+    <Addr_Line>Jefferson City, MO 65102-1767</Addr_Line>
+  </State>
+  <State name="Montana" abbrv="MT">
+    <Reg_Deadline>30 days before the election.</Reg_Deadline>
+    <Addr_Line>Secretary of State's Office</Addr_Line>
+    <Addr_Line>P.O. Box 202801</Addr_Line>
+    <Addr_Line>State Capitol</Addr_Line>
+    <Addr_Line>Helena, MT 59620-2801</Addr_Line>
+  </State>
+  <State name="Nebraska" abbrv="NE">
+    <Reg_Deadline>The third Friday before the election (or delivered by 6 PM on the second Friday before the election).</Reg_Deadline>
+    <Addr_Line>Nebraska Secretary of State</Addr_Line>
+    <Addr_Line>Suite 2300, State Capitol Bldg.</Addr_Line>
+    <Addr_Line>Lincoln, NE 68509-4608</Addr_Line>
+  </State>
+  <State name="Nevada" abbrv="NV">
+    <Reg_Deadline>9:00 PM on the third Tuesday before any primary or general election. 9:00 PM on the third Saturday before any recall or special election. However, if a recall or special election is held on the same day as a primary or general election, the registration closes at 9:00 P on the third Tuesday before the day for the election.</Reg_Deadline>
+    <Addr_Line>Secretary of State</Addr_Line>
+    <Addr_Line>Elections Division</Addr_Line>
+    <Addr_Line>101 North Carson Street Suite 3</Addr_Line>
+    <Addr_Line>Carson City, NV 89701-4786</Addr_Line>
+  </State>
+  <State name="New Hampshire" abbrv="NH">
+    <Reg_Deadline>Town and city clerks will accept this application only as a request for their own absentee voter mail-in registration form, which must be received by your city or town clerk by 10 days before the election. </Reg_Deadline>
+  </State>
+  <State name="New Jersey" abbrv="NJ">
+    <Reg_Deadline>21 days before election.</Reg_Deadline>
+    <Addr_Line>New Jersey Department of Law and Public Safety</Addr_Line>
+    <Addr_Line>Division of Elections</Addr_Line>
+    <Addr_Line>P.O. Box 304</Addr_Line>
+    <Addr_Line>Trenton, NJ 08625-0304</Addr_Line>
+  </State>
+  <State name="New Mexico" abbrv="NM">
+    <Reg_Deadline>28 days before the election.</Reg_Deadline>
+    <Addr_Line>Bureau of Elections</Addr_Line>
+    <Addr_Line>325 Don Gaspar, Suite 300</Addr_Line>
+    <Addr_Line>Santa Fe, NM 87503</Addr_Line>
+  </State>
+  <State name="New York" abbrv="NY">
+    <Reg_Deadline>25 days before the election.</Reg_Deadline>
+    <Addr_Line>NYS Board of Elections</Addr_Line>
+    <Addr_Line>40 Steuben Street</Addr_Line>
+    <Addr_Line>Albany, NY 12207-2108</Addr_Line>
+  </State>
+  <State name="North Carolina" abbrv="NC">
+    <Reg_Deadline>Postmarked 25 days before the election or received in the elections office or designated voter registration agency site by 5 PM 25 days before the election.</Reg_Deadline>
+    <Addr_Line>State Board of Elections</Addr_Line>
+    <Addr_Line>P.O. Box 27255</Addr_Line>
+    <Addr_Line>Raleigh, NC 27611-7255</Addr_Line>
+  </State>
+  <State name="Ohio" abbrv="OH">
+    <Reg_Deadline>30 days before the election.</Reg_Deadline>
+    <Addr_Line>Secretary of State of Ohio</Addr_Line>
+    <Addr_Line>Elections Division</Addr_Line>
+    <Addr_Line>180 E. Broad Street - 15th Floor</Addr_Line>
+    <Addr_Line>Columbus, OH 43215</Addr_Line>
+  </State>
+  <State name="Oklahoma" abbrv="OK">
+    <Reg_Deadline>25 days before the election.</Reg_Deadline>
+    <Addr_Line>Oklahoma State Election Board</Addr_Line>
+    <Addr_Line>Box 528800</Addr_Line>
+    <Addr_Line>Oklahoma City, OK 73152-8800</Addr_Line>
+  </State>
+  <State name="Oregon" abbrv="OR">
+    <Reg_Deadline>21 days before the election.</Reg_Deadline>
+    <Addr_Line>Secretary of State</Addr_Line>
+    <Addr_Line>Elections Division</Addr_Line>
+    <Addr_Line>141 State Capitol</Addr_Line>
+    <Addr_Line>Salem, OR 97310-0722</Addr_Line>
+  </State>
+  <State name="Pennsylvania" abbrv="PA">
+    <Reg_Deadline>30 days before an election or primary.</Reg_Deadline>
+    <Addr_Line>Office of the Secretar of the Commonwealth</Addr_Line>
+    <Addr_Line>210 North Office Bldg.</Addr_Line>
+    <Addr_Line>Harrisburg, PA 17120-0029</Addr_Line>
+  </State>
+  <State name="Rhode Island" abbrv="RI">
+    <Reg_Deadline>30 days before the election.</Reg_Deadline>
+    <Addr_Line>Rhode Isbland State Board of Elections</Addr_Line>
+    <Addr_Line>50 Branch Ave.</Addr_Line>
+    <Addr_Line>Providence, RI 02904-2790</Addr_Line>
+  </State>
+  <State name="South Carolina" abbrv="SC">
+    <Reg_Deadline>30 days before the election.</Reg_Deadline>
+    <Addr_Line>State Election Commission</Addr_Line>
+    <Addr_Line>P.O. Box 5987</Addr_Line>
+    <Addr_Line>Columbia, SC 29250-5987</Addr_Line>
+  </State>
+  <State name="South Dakota" abbrv="SD">
+    <Reg_Deadline>Received 15 days before the election.</Reg_Deadline>
+    <Addr_Line>Elections, Secretary of State</Addr_Line>
+    <Addr_Line>500. E. Capitol</Addr_Line>
+    <Addr_Line>Pierre, SD 57501-5070</Addr_Line>
+  </State>
+  <State name="Tennessee" abbrv="TN">
+    <Reg_Deadline>30 days before the election.</Reg_Deadline>
+    <Addr_Line>Coordinator of Elections</Addr_Line>
+    <Addr_Line>Tennessee Tower, Ninth Floor</Addr_Line>
+    <Addr_Line>312 Eighth Avenue, North</Addr_Line>
+    <Addr_Line>Nashville, TN 37243</Addr_Line>
+  </State>
+  <State name="Texas" abbrv="TX">
+    <Reg_Deadline>30 days before the election.</Reg_Deadline>
+    <Addr_Line>Office of the Secretary of State</Addr_Line>
+    <Addr_Line>Elections Division</Addr_Line>
+    <Addr_Line>P.O. Box 12060</Addr_Line>
+    <Addr_Line>Austin, TX 78711-2060</Addr_Line>
+  </State>
+  <State name="Utah" abbrv="UT">
+    <Reg_Deadline>30 days before the election for mail-in applications; 15 days before the election for walk-in registrations at the country clerk's office.</Reg_Deadline>
+    <Addr_Line>Office of the Lieutenant Governor</Addr_Line>
+    <Addr_Line>P.O. Box 142325</Addr_Line>
+    <Addr_Line>Salt Lake City, UT 84114</Addr_Line>
+  </State>
+  <State name="Vermont" abbrv="VT">
+    <Reg_Deadline>Delivered to the town clerk before 5 PM on the Wednesday before the election.</Reg_Deadline>
+    <Addr_Line>Office of the Secretar of State</Addr_Line>
+    <Addr_Line>Director of Elections</Addr_Line>
+    <Addr_Line>26 Terrace Street</Addr_Line>
+    <Addr_Line>Montpelier, VT 05609-1101</Addr_Line>
+  </State>
+  <State name="Viginia" abbrv="VA">
+    <Reg_Deadline>Delivered 29 days befoe the election.</Reg_Deadline>
+    <Addr_Line>State Board of Elections</Addr_Line>
+    <Addr_Line>200 N. 9th Street, Suite 101</Addr_Line>
+    <Addr_Line>Richmond, VA 23219</Addr_Line>
+  </State>
+  <State name="Washington" abbrv="WA">
+    <Reg_Deadline>30 days before the election (or delivered in-person to the local voter registration office 15 days before the election).</Reg_Deadline>
+    <Addr_Line>Secretary of State</Addr_Line>
+    <Addr_Line>Voter Registration by Mail</Addr_Line>
+    <Addr_Line>P.O. Box 40230</Addr_Line>
+    <Addr_Line>Olympia, WA 98504-0230</Addr_Line>
+  </State>
+  <State name="West Virginia" abbrv="WV">
+    <Reg_Deadline>21 days before the election.</Reg_Deadline>
+    <Addr_Line>Secretary of State</Addr_Line>
+    <Addr_Line>Building 1, Suite 157-K</Addr_Line>
+    <Addr_Line>1900 Kanawha Blvd. East</Addr_Line>
+    <Addr_Line>Charleston, WV 25305-0770</Addr_Line>
+  </State>
+  <State name="Wisconsin" abbrv="WI">
+    <Reg_Deadline>20 days before the election (or completed in the local voter registration office up to 5 PM 1 day before the election, or completed at the polling place on election day).</Reg_Deadline>
+    <Addr_Line>State Elections Board</Addr_Line>
+    <Addr_Line>17 West Main Street, Suite 310</Addr_Line>
+    <Addr_Line>P.O. Box 2973</Addr_Line>
+    <Addr_Line>Madison, WI 53701-2973</Addr_Line>
+  </State>
+</StateData>
