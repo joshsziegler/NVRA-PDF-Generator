@@ -27,19 +27,12 @@ my $lineOffset   = $fontSize + 1; # Try $fontSize + 1 or 2
 
 my  $error;       
 my  $numArgs     = $#ARGV + 1;
-my  $resultsFile = " "; 
-my  $sourceFile  = " "; 
-my  $regDeadline = " ";
-my  $lineOne     = " "; 
-my  $lineTwo     = " "; 
-my  $lineThree   = " "; 
-my  $lineFour    = " ";
 
 # Check for minimum number of arguments 
 if ($numArgs >= 3) { 
-   $sourceFile  = $ARGV[0];  
-   $resultsFile = $ARGV[1];
-   $text        = $ARGV[2];
+   my $sourceFile  = $ARGV[0];  
+   my $resultsFile = $ARGV[1];
+   my $text        = $ARGV[2];
 
 }else {  
      $error = "Error: Wrong number of Arguments! \n";
@@ -56,16 +49,10 @@ if (!$error){
    prFontSize ( $fontSize );
 
    # Convert long string to array of lines (using max width)
-   my @txtArray = convLineToCol ( $maxRegTextWidth, $font, $fontSize, $regDeadline);
+   my @txtArray = convLineToCol ( $maxRegTextWidth, $font, $fontSize, $text);
 
    # Note that txtArray is being passed by reference!
-   writeMultiLineStr( 370, 450, $lineOffset, $font, $boldFont, \@txtArray); 
-
-   # Write out the address lines on the PDF
-   prText( 370, 550, $lineOne);    # 1st Address Line
-   prText( 370, 535, $lineTwo);    # 2nd Address Line
-   prText( 370, 520, $lineThree);  # 3rd Address Line
-   prText( 370, 505, $lineFour);   # 4th Address Line
+   writeMultiLineStr( 370, 600, $lineOffset, $font, $boldFont, \@txtArray); 
 
    # Provide the source file to use as our starting point
    prSinglePage($sourceFile); 
