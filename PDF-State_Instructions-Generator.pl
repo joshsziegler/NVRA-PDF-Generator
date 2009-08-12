@@ -18,9 +18,9 @@ my  $maxRegTextWidth = 200;
 my  $maxRegTextLines = 10; 
 
 #Setup the font here -- see PDF:Reuse for options
-my $font         = 'H';  # Helvetica
-my $boldFont     = 'HB'; # Helvetica-Bold
-my $fontSize     = 12;
+my $font         = 'Times-Roman';  
+my $boldFont     = 'Times-Bold'; 
+my $fontSize     = 9;
 
 # Text output options
 my $lineOffset   = $fontSize + 1; # Try $fontSize + 1 or 2
