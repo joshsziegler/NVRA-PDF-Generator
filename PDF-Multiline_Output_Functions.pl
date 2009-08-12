@@ -1,19 +1,19 @@
 #!/usr/bin/perl
 
-This file is part of NVRA-PDF-Generator .
-
-    NVRA-PDF-Generator is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    NVRA-PDF-Generator is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with NVRA-PDF-Generator .  If not, see <http://www.gnu.org/licenses/>.
+#This file is part of NVRA-PDF-Generator .
+#
+#    NVRA-PDF-Generator is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    NVRA-PDF-Generator is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with NVRA-PDF-Generator .  If not, see <http://www.gnu.org/licenses/>.
 
 
 use PDF::Reuse;
@@ -47,7 +47,12 @@ sub convLineToCol{ # Convert (Single Long) Line To (Multiline) Column
          # When a newline flag is encountered, push the current line on
          # to the array and start a new one
          push( @lines, $curLineText);
+         $curLineText = "";
          $tmpLineText = ""; 
+
+      }elsiif ($curWord eq "*S*"){
+         # When a space flag is encountered, add in three spaces to the line
+         
   
       }else{ # Add the word to the lines of text
          # if the next item in the word array doesn't put the cur line
@@ -102,10 +107,10 @@ sub writeMultiLineStr {
          # Remove extra space if needed
          if( substr( $curLine,0,1) eq " ") {substr( $curLine,0,1) = "";} 
          prFont( $boldFont );
+         prText( $xPos-4, $yPos , $curLine ); # Print slightly to the left 
+      }else{
+         prText( $xPos, $yPos , $curLine );
       }
-
-      prText( $xPos, $yPos , $curLine );
-
       # Shift our Y Position down to move to the next "line"
       $yPos -= $lineOffset;
       # Reset our font back to normal
