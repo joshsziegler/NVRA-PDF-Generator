@@ -27,7 +27,6 @@ stateSpecInstr = xml.dom.minidom.parse(state_Data_Dir + state_Spec_Instr)
 for state in basicStateInfo.getElementsByTagName("State"):
  
   ### Begin reading in the state's information
- 
   name = state.getAttribute("name")
   abbrv = state.getAttribute("abbrv")
   regDeadline = state.getElementsByTagName("Reg_Deadline")[0].firstChild.data
@@ -37,7 +36,17 @@ for state in basicStateInfo.getElementsByTagName("State"):
   addressArgs = ""
   for subnode in state.getElementsByTagName("Addr_Line"):
      addressArgs += " \"" + subnode.childNodes[0].data + " \""
- 
+   
+  # Read in the State-Specific Instructions for each language
+  for state_inst in stateSpecInstr.getElementsByTagName("State"):
+     if name == state_inst.getAttribute("name"):
+        for subnode in state_inst.getElementsByTagName("Instructions"):
+           lang = subnode.getAttribute("lang")
+           if lang == "English":
+              englishInstrTxt = "\"" + subnode.childNodes[0].data + "\""           
+           elif lang == "Spanish": 
+              spanishInstrTxt = "\"" + subnode.childNodes[0].data + "\""           
+
   ### Begin the actual PDF generation
   
   for language in language_versions:
@@ -67,12 +76,20 @@ for state in basicStateInfo.getElementsByTagName("State"):
      cmd += " " + addressArgs
      mP = subprocess.Popen (cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
  
-     # Generate 2nd Page of Instructions (State-Specific) (uses an external Perl script)
-     # left blank for now
+     # Generate State-Specific Instructions (uses an external Perl script)
+     cmd = "perl PDF-State_Instructions-Generator.pl"
+     cmd += " " + instrTempl_pg2 + " " + newInstruc_pg2 + " "
+     if language == "en": 
+        cmd += englishInstrTxt 
+     elif language == "es":
+        cmd += spanishInstrTxt
+     iP = subprocess.Popen (cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+     print cmd
  
      # Wait for each PDF creator script to exit before trying to combine them all
      cP.wait() # Cover Process
      mP.wait() # Mailer Process
+     iP.wait() # State-Specific Instructions Page Process
      
      # Combine all of the pages together to form the completed PDF
      cmd = "pdftk"
@@ -80,7 +97,7 @@ for state in basicStateInfo.getElementsByTagName("State"):
      cmd += " " + regFormTemplate
      cmd += " " + newMailerPath
      cmd += " " + instrTempl_pg1
-     # cmd += " " + newInstruc_pg2
+     cmd += " " + newInstruc_pg2
      cmd += " cat output "
      cmd += " " + finalPDF_Path
      p = subprocess.Popen (cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)

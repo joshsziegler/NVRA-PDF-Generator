@@ -1,2 +1,6 @@
 <State_Specific_Instructions>
+  <State name="Alabama" abbrv="AL">
+    <Instructions lang="English">*B* Hello. *NL* Bye.</Instructions>
+    <Instructions lang="Spanish">*B* Hello. *NL* Bye.</Instructions>
+  </State>
 </State_Specific_Instructions>

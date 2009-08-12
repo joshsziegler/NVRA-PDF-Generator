@@ -27,12 +27,15 @@ my $lineOffset   = $fontSize + 1; # Try $fontSize + 1 or 2
 
 my  $error;       
 my  $numArgs     = $#ARGV + 1;
+my  $sourceFile  = "";
+my  $resultsFile = "";
+my  $text        = "";
 
 # Check for minimum number of arguments 
 if ($numArgs >= 3) { 
-   my $sourceFile  = $ARGV[0];  
-   my $resultsFile = $ARGV[1];
-   my $text        = $ARGV[2];
+   $sourceFile  = $ARGV[0];  
+   $resultsFile = $ARGV[1];
+   $text        = $ARGV[2];
 
 }else {  
      $error = "Error: Wrong number of Arguments! \n";
