@@ -1,6 +1,196 @@
 <State_Specific_Instructions>
+<StateData>
   <State name="Alabama" abbrv="AL">
-    <Instructions lang="English">*B* Hello. *NL* Bye.</Instructions>
-    <Instructions lang="Spanish">*B* Hello. *NL* Bye.</Instructions>
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
   </State>
+  <State name="Alaska" abbrv="AK">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Arizona" abbrv="AZ">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Arkansas" abbrv="AR">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="California" abbrv="CA">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Colorado" abbrv="CO">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Connecticut" abbrv="CT">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Delaware" abbrv="DE">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="District of Columbia" abbrv="DC">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Florida" abbrv="FL">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Georgia" abbrv="GA">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Hawaii" abbrv="HI">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Idaho" abbrv="ID">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Illinois" abbrv="IL">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Iowa" abbrv="IA">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Kansas" abbrv="KS">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Kentucky" abbrv="KY">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Louisiana" abbrv="LA">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Maine" abbrv="ME">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Maryland" abbrv="MD">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Massachusetts" abbrv="MA">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Michigan" abbrv="MI">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Minnesota" abbrv="MN">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Mississippi" abbrv="MS">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Missouri" abbrv="MO">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Montana" abbrv="MT">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Nebraska" abbrv="NE">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Nevada" abbrv="NV">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="New Hampshire" abbrv="NH">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="New Jersey" abbrv="NJ">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="New Mexico" abbrv="NM">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="New York" abbrv="NY">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="North Carolina" abbrv="NC">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Ohio" abbrv="OH">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Oklahoma" abbrv="OK">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Oregon" abbrv="OR">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Pennsylvania" abbrv="PA">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Rhode Island" abbrv="RI">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="South Carolina" abbrv="SC">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="South Dakota" abbrv="SD">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Tennessee" abbrv="TN">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Texas" abbrv="TX">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Utah" abbrv="UT">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Vermont" abbrv="VT">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Viginia" abbrv="VA">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Washington" abbrv="WA">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="West Virginia" abbrv="WV">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+  <State name="Wisconsin" abbrv="WI">
+      <Instructions lang="English"></Instructions>
+      <Instructions lang="Spanish"></Instructions>
+  </State>
+</StateData>
 </State_Specific_Instructions>
