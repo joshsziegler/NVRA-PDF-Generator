@@ -24,7 +24,7 @@ use strict;
 use Switch;
 
 # Personal Libraries
-do "PDF-Multiline_Output_Functions.pl";
+require "PDF-Multiline_Output_Functions.pl";
 
 # Max Registration Text Width sets the maximum width in points 
 # that can fit on the Registration Date column/section.  If this 

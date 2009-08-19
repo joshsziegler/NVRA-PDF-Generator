@@ -58,7 +58,7 @@ for state in basicStateInfo.getElementsByTagName("State"):
   # Read in the State-Specific Instructions for each language
   for state_inst in stateSpecInstr.getElementsByTagName("State"):
      if name == state_inst.getAttribute("name"):
-        print "\nNames Equal: " + name + state_inst.getAttribute("name")
+	print "Processing PDF for", name + "..."
         for subnode in state_inst.getElementsByTagName("Instructions"):
            lang = subnode.getAttribute("lang")
            if lang == "English":
@@ -86,6 +86,8 @@ for state in basicStateInfo.getElementsByTagName("State"):
      cmd += " " + newCoverPath
      cmd += " \"" + regDeadline + "\""
      cmd += " " + addressArgs
+     print "Generating cover page..."
+     print cmd
      cP = subprocess.Popen (cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
  
      # Generate Mailer PDF (uses an external Perl script)
@@ -93,7 +95,7 @@ for state in basicStateInfo.getElementsByTagName("State"):
      cmd += " " + mailerTemplate
      cmd += " " + newMailerPath
      cmd += " " + addressArgs
-     mP = subprocess.Popen (cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+     mP = subprocess.Popen (cmd, shell=True, stdout=subprocess.PIPE)#, stderr=subprocess.PIPE)
  
      # Generate State-Specific Instructions (uses an external Perl script)
      cmd = "perl PDF-State_Instructions-Generator.pl "
@@ -102,8 +104,8 @@ for state in basicStateInfo.getElementsByTagName("State"):
         cmd += englishInstrTxt 
      elif language == "es":
         cmd += spanishInstrTxt
-     iP = subprocess.Popen (cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-     print cmd
+     iP = subprocess.Popen (cmd, shell=True, stdout=subprocess.PIPE)#, stderr=subprocess.PIPE)
+     #print cmd
  
      # Wait for each PDF creator script to exit before trying to combine them all
      cP.wait() # Cover Process
@@ -119,10 +121,11 @@ for state in basicStateInfo.getElementsByTagName("State"):
      cmd += " " + newInstruc_pg2
      cmd += " cat output "
      cmd += " " + finalPDF_Path
-     p = subprocess.Popen (cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+     print cmd
+     p = subprocess.Popen (cmd, shell=True, stdout=subprocess.PIPE)#, stderr=subprocess.PIPE)
      p.wait() # Wait until the subprocess completes
     
      # Delete all temporary PDF's
      cmd = "rm " + newCoverPath + "; "
      cmd += "rm " + newMailerPath + "; "
-     p = subprocess.Popen (cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE) 
+    # p = subprocess.Popen (cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE) 

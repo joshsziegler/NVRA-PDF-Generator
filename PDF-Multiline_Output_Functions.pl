@@ -50,7 +50,7 @@ sub convLineToCol{ # Convert (Single Long) Line To (Multiline) Column
          $curLineText = "";
          $tmpLineText = ""; 
 
-      }elsiif ($curWord eq "*S*"){
+      } elsif ($curWord eq "*S*") {
          # When a space flag is encountered, add in three spaces to the line
          
   
@@ -118,4 +118,4 @@ sub writeMultiLineStr {
    } 
 }
 
-
+1;
