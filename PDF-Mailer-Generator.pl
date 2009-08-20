@@ -35,9 +35,10 @@ my  $lineFour    = " ";
 if ($numArgs >= 2) { 
    $sourceFile  = $ARGV[0];  
    $resultsFile = $ARGV[1];
+
    # Address lines 1-4 are optional, leave as default if not present
-   if ($numArgs >= 4) { $lineOne   = $ARGV[3]; }
-   if ($numArgs >= 5) { $lineTwo   = $ARGV[4]; }
+   if ($numArgs >= 3) { $lineOne   = $ARGV[2]; }
+   if ($numArgs >= 4) { $lineTwo   = $ARGV[3]; }
    if ($numArgs >= 5) { $lineThree = $ARGV[4]; }
    if ($numArgs == 6) { $lineFour  = $ARGV[5]; }
 
