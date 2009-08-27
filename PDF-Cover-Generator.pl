@@ -90,17 +90,17 @@ if (!$error){ # If there were no errors execute the main program block
    my @txtArray = convLineToCol ( $maxRegTextWidth, $font, $fontSize, $regDeadline);
 
    # Note that txtArray is being passed by reference!
-   writeMultiLineStr( 370, 450, $lineOffset, $font, $boldFont, \@txtArray); 
+   writeMultiLineStr( 365, 450, $lineOffset, $font, $boldFont, \@txtArray); 
 
    # Write out the address lines on the PDF
-   prText( 370, 550, $lineOne);    # 1st Address Line
-   prText( 370, 535, $lineTwo);    # 2nd Address Line
-   prText( 370, 520, $lineThree);  # 3rd Address Line
-   prText( 370, 505, $lineFour);   # 4th Address Line
+   prText( 365, 550, $lineOne);    # 1st Address Line
+   prText( 365, 535, $lineTwo);    # 2nd Address Line
+   prText( 365, 520, $lineThree);  # 3rd Address Line
+   prText( 365, 505, $lineFour);   # 4th Address Line
 
    # Provide the source file to use as our starting point
    prSinglePage($sourceFile); 
-   prEnd; # Flush the buffers and save the completed PDF
+   prEnd(); # Flush the buffers and save the completed PDF
 }else {
    print $error;
 }

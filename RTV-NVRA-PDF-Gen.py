@@ -26,7 +26,8 @@ from xml.dom.minidom import Node
 # <State Abbreviation>-NRVA-<Language_Abbreviation>.pdf
  
 # Script variables
-language_versions = {"English": "en", "Spanish": "es"} # List each language to be used.
+languages = {"English": {"abbrv": "en", "reg_deadline": "Registration Deadline: "},
+  "Spanish": {"abbrv": "es", "reg_deadline": "Es reg deadline:"}} # List each language to be used.
 PDF_Assembly_Dir = "PDF_Assembly_Area/" # Must end with '/'
 template_PDF_Dir = "Template_PDFs/" # Must end with '/'
 final_PDF_Dir = "Final_PDFs/" # Must end with '/'
@@ -35,6 +36,7 @@ state_instructions_file = "widget-state-instructions.xml"
  
 ### Beginning of heavy lifting -- do not edit below here!
 state_instructions = xml.dom.minidom.parse(state_Data_Dir + state_instructions_file)
+print "Loaded state instructions file:", state_instructions_file
 
 states_completed = 0
  
@@ -49,13 +51,13 @@ for state in state_instructions.getElementsByTagName("row"):
   name = state.getElementsByTagName("state")[0].firstChild.data
   lang = state.getElementsByTagName("language")[0].firstChild.data
   nvra_support = int(state.getElementsByTagName("nvra_support")[0].firstChild.data)
-  print "Processing", name, "in", lang, "...",
+  print "Processing", name, "in", lang,
   if nvra_support == 0:
-    print "does not support NVRA, stopping processing."
+    print "-- does not support NVRA; stopping processing."
     continue
 
   # Get the language's abbreviation from the translation table.
-  language = language_versions[lang]
+  language = languages[lang]["abbrv"];
 
   # Load additional data for the state.
   regDeadline = state.getElementsByTagName("deadline")[0].firstChild.data
@@ -91,19 +93,24 @@ for state in state_instructions.getElementsByTagName("row"):
  
   # Generate State-Specific Instructions (uses an external Perl script).
   cmd = "perl PDF-State_Instructions-Generator.pl " + instrTempl_pg2 + " " + newInstruc_pg2 + ' "' + name + '" '
-  cmd += '"' + regDeadline + '" "' + requirements + '"' 
+  cmd += '"' + languages[lang]["reg_deadline"] + regDeadline + '" "' + requirements + '"' 
   iP = subprocess.Popen(cmd, shell=True)
  
   # Wait for each PDF creator script to exit before trying to combine them all.
   cP.wait() # Cover Process.
+  print ".",
   mP.wait() # Mailer Process.
+  print ".",
   iP.wait() # State-Specific Instructions Page Process.
+  print ".",
      
   # Combine all of the pages together to form the completed PDF.
   cmd = "pdftk " + newCoverPath + " " + regFormTemplate + " " + newMailerPath + " " + instrTempl_pg1
   cmd += " " + newInstruc_pg2 + " cat output " + " " + finalPDF_Path
   p = subprocess.Popen (cmd, shell=True, stdout=subprocess.PIPE)
   p.wait() # Wait until the subprocess completes.
+  print ".",
+     
     
   # Delete all temporary PDF's.
   cmd = "rm " + newCoverPath + "; rm " + newMailerPath + "; rm " + newInstruc_pg2 + "; "

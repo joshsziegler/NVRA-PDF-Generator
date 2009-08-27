@@ -64,20 +64,30 @@ if (!$error) {
 
    prFile($resultsFile); # Setup output file.
     
+
    # Font Options - Note that some of these are overridden in the multiline output function.
    blackText();
    prFont( $font );
    prFontSize ( $fontSize );
-
-   # Convert long string to array of lines (using max width).
-   my @txtArray = convLineToCol ( $maxRegTextWidth, $font, $fontSize, $text);
-
-   # Output the state-specific requirements text.
-   # Note that txtArray is being passed by reference!
-   writeMultiLineStr( 320, 710, $lineOffset, $font, $boldFont, \@txtArray); 
+   prField('State', $stateName) or print "wtf?";
 
    # Output the state name.
-   # prText(320, 810, $stateName);
+   prFontSize(11);
+   prFont("Times-Bold");
+   prText(419, 737, $stateName);
+
+   prFontSize(9);
+   prFont("Times-Roman");
+
+   # Convert long string to array of lines (using max width).
+   my @deadlineArray = convLineToCol ($maxRegTextWidth, $font, $fontSize, $regDeadline);
+   # Output the registration deadline string (e.g. "Registration Deadline:  30 days before the election.").
+   writeMultiLineStr(316, 710, $lineOffset, $font, $boldFont, \@deadlineArray);
+   # Note use of \@ to pass by reference.
+
+   # Output the state-specific requirements text.
+   my @txtArray = convLineToCol ( $maxRegTextWidth, $font, $fontSize, $text);
+   writeMultiLineStr(316, 650, $lineOffset, $font, $boldFont, \@txtArray); 
 
    # Provide the source file to use as our starting point.
    prSinglePage($sourceFile); 
