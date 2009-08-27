@@ -32,7 +32,13 @@ sub convLineToCol{ # Convert (Single Long) Line To (Multiline) Column
    my $maxWidth     = @_[0];
    my $font         = @_[1];
    my $fontSize     = @_[2];
-   my @words        = split(' ', @_[3]);
+   my $string       = @_[3];
+   print $string;
+   $string =~ s/<li>/<br> * /g;
+   print $string;
+   $string =~ s/<br>/ <br> /g;
+   print $string;
+   my @words        = split(' ', $string);
 
    # Other Variables
    my $curLineText  = "";
@@ -43,7 +49,7 @@ sub convLineToCol{ # Convert (Single Long) Line To (Multiline) Column
    foreach my $curWord (@words){
       # For each word, do as instructed if a flag, or add it to the line  
       # with the running array of lines
-      if ($curWord eq "*NL*"){
+      if ($curWord eq "*NL*" or $curWord eq "<br>" or $curWord eq "<li>"){
          # When a newline flag is encountered, push the current line on
          # to the array and start a new one
          push( @lines, $curLineText);

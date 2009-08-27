@@ -23,7 +23,7 @@ use strict;
 use Switch;
 
 # Personal Libraries
-do "PDF-Multiline_Output_Functions.pl";
+require "PDF-Multiline_Output_Functions.pl";
 
 # Max Registration Text Width sets the maximum width in points 
 # that can fit on the Registration Date column/section.  If this 
@@ -66,8 +66,12 @@ if (!$error){
    prFont( $font );
    prFontSize ( $fontSize );
 
+#   $text =~ s/<li>/ \n * /g;
+
    # Convert long string to array of lines (using max width)
    my @txtArray = convLineToCol ( $maxRegTextWidth, $font, $fontSize, $text);
+
+   #$text = s/^(.*)?<li>(.*?)((<li>(.*?))+)/$1 $
 
    # Note that txtArray is being passed by reference!
    writeMultiLineStr( 320, 710, $lineOffset, $font, $boldFont, \@txtArray); 
