@@ -30,9 +30,9 @@ require "PDF-Multiline_Output_Functions.pl";
 # needs to be changed, you will have to test the new width using
 # prStrWidth and carefully set the below variable!
 my  $maxRegTextWidth = 200; 
-my  $maxRegTextLines = 10; 
+my  $maxRegTextLines = 10; # TODO: May need to increase this to ~20.
 
-#Setup the font here -- see PDF:Reuse for options
+# Setup the font here -- see PDF:Reuse for options
 my $font         = 'Times-Roman';  
 my $boldFont     = 'Times-Bold'; 
 my $fontSize     = 9;
@@ -45,18 +45,22 @@ my  $numArgs     = $#ARGV + 1;
 my  $sourceFile  = "";
 my  $resultsFile = "";
 my  $text        = "";
+my  $stateName   = "";
 
-# Check for minimum number of arguments 
-if ($numArgs >= 3) { 
+# Check for minimum number of arguments.
+if ($numArgs >= 5) { 
    $sourceFile  = $ARGV[0];  
    $resultsFile = $ARGV[1];
-   $text        = $ARGV[2];
+   $stateName   = $ARGV[2];
+   $regDeadline = $ARGV[3];
+   $text        = $ARGV[4];
 
-}else {  
-     $error = "Error: Wrong number of Arguments! \n";
+}
+else {  
+  $error = "Error: Wrong number of Arguments! \n";
 }
 
-if (!$error){ 
+if (!$error) {
 
    prFile($resultsFile); # Setup output file
     
@@ -66,12 +70,8 @@ if (!$error){
    prFont( $font );
    prFontSize ( $fontSize );
 
-#   $text =~ s/<li>/ \n * /g;
-
    # Convert long string to array of lines (using max width)
    my @txtArray = convLineToCol ( $maxRegTextWidth, $font, $fontSize, $text);
-
-   #$text = s/^(.*)?<li>(.*?)((<li>(.*?))+)/$1 $
 
    # Note that txtArray is being passed by reference!
    writeMultiLineStr( 320, 710, $lineOffset, $font, $boldFont, \@txtArray); 
@@ -79,6 +79,7 @@ if (!$error){
    # Provide the source file to use as our starting point
    prSinglePage($sourceFile); 
    prEnd; # Flush the buffers and save the completed PDF
-}else {
+}
+else {
    print $error;
 }

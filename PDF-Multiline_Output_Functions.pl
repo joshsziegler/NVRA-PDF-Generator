@@ -26,18 +26,18 @@ use strict;
 #    lines with a maximum length (in points, see PDF::Reuse)
 #    as requested (see argument list). 
 ###
-sub convLineToCol{ # Convert (Single Long) Line To (Multiline) Column
+sub convLineToCol { # Convert (Single Long) Line To (Multiline) Column
 
    # Args: 1: max width in points 2: font 3: font size 4: String
    my $maxWidth     = @_[0];
    my $font         = @_[1];
    my $fontSize     = @_[2];
    my $string       = @_[3];
-   print $string;
-   $string =~ s/<li>/<br> * /g;
-   print $string;
+
+   # Convert list elements to a newline combined with an asterisk.
+   $string =~ s/<li>/<br>* /g;
+   # Add spaces around newlines so that the are properly processed as separate words.
    $string =~ s/<br>/ <br> /g;
-   print $string;
    my @words        = split(' ', $string);
 
    # Other Variables
@@ -49,10 +49,10 @@ sub convLineToCol{ # Convert (Single Long) Line To (Multiline) Column
    foreach my $curWord (@words){
       # For each word, do as instructed if a flag, or add it to the line  
       # with the running array of lines
-      if ($curWord eq "*NL*" or $curWord eq "<br>" or $curWord eq "<li>"){
+      if ($curWord eq "*NL*" or $curWord eq "<br>" or $curWord eq "<li>") {
          # When a newline flag is encountered, push the current line on
          # to the array and start a new one
-         push( @lines, $curLineText);
+         push(@lines, $curLineText);
          $curLineText = "";
          $tmpLineText = ""; 
 
@@ -60,7 +60,7 @@ sub convLineToCol{ # Convert (Single Long) Line To (Multiline) Column
          # When a space flag is encountered, add in three spaces to the line
          
   
-      }else{ # Add the word to the lines of text
+      } else { # Add the word to the lines of text
          # if the next item in the word array doesn't put the cur line
          # over the max width, add it and keep going.
          $tmpLineText = "$tmpLineText $curWord";
@@ -78,8 +78,8 @@ sub convLineToCol{ # Convert (Single Long) Line To (Multiline) Column
       }
   }
   # Because the last partial line will not be added when we run
-  # fout of words, force it to added to the line array at the end
-  if ($tmpLineText){
+  # out of words, force it to added to the line array at the end.
+  if ($tmpLineText) {
      push( @lines, $tmpLineText);
   }
       
@@ -106,20 +106,25 @@ sub writeMultiLineStr {
 
    foreach my $curLine (@lineArray){
       # Remove extra space if needed
-      if( substr( $curLine,0,1) eq " ") {substr( $curLine,0,1) = "";} 
+      if (substr( $curLine, 0, 1) eq " ") {
+        substr( $curLine, 0, 1) = "";
+      } 
 
-      if ( substr($curLine,0,3) eq "*B*") { # If this line is marked bold, turn bold font on
-         substr( $curLine, 0, 3) = "";      # Remove the Bold markup tag   
+      if ( substr($curLine, 0, 3) eq "<b>") { # If this line is marked bold, turn bold font on.
+         substr( $curLine, 0, 3) = "";      # Remove the Bold markup tag.
          # Remove extra space if needed
-         if( substr( $curLine,0,1) eq " ") {substr( $curLine,0,1) = "";} 
+         if (substr( $curLine, 0, 1) eq " ") {
+           substr( $curLine, 0, 1) = "";
+         } 
          prFont( $boldFont );
-         prText( $xPos-4, $yPos , $curLine ); # Print slightly to the left 
-      }else{
+         prText( $xPos - 4, $yPos , $curLine ); # Print slightly to the left.
+      }
+      else {
          prText( $xPos, $yPos , $curLine );
       }
-      # Shift our Y Position down to move to the next "line"
+      # Shift our Y Position down to move to the next "line".
       $yPos -= $lineOffset;
-      # Reset our font back to normal
+      # Reset our font back to normal.
       prFont( $normalFont );
    } 
 }
