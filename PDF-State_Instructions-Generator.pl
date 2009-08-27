@@ -46,6 +46,7 @@ my  $sourceFile  = "";
 my  $resultsFile = "";
 my  $text        = "";
 my  $stateName   = "";
+my  $regDeadline = "";
 
 # Check for minimum number of arguments.
 if ($numArgs >= 5) { 
@@ -54,7 +55,6 @@ if ($numArgs >= 5) {
    $stateName   = $ARGV[2];
    $regDeadline = $ARGV[3];
    $text        = $ARGV[4];
-
 }
 else {  
   $error = "Error: Wrong number of Arguments! \n";
@@ -62,23 +62,26 @@ else {
 
 if (!$error) {
 
-   prFile($resultsFile); # Setup output file
+   prFile($resultsFile); # Setup output file.
     
-   # Font Options - Note that some of these are overridden in
-   # the multiline output function 
+   # Font Options - Note that some of these are overridden in the multiline output function.
    blackText();
    prFont( $font );
    prFontSize ( $fontSize );
 
-   # Convert long string to array of lines (using max width)
+   # Convert long string to array of lines (using max width).
    my @txtArray = convLineToCol ( $maxRegTextWidth, $font, $fontSize, $text);
 
+   # Output the state-specific requirements text.
    # Note that txtArray is being passed by reference!
    writeMultiLineStr( 320, 710, $lineOffset, $font, $boldFont, \@txtArray); 
 
-   # Provide the source file to use as our starting point
+   # Output the state name.
+   # prText(320, 810, $stateName);
+
+   # Provide the source file to use as our starting point.
    prSinglePage($sourceFile); 
-   prEnd; # Flush the buffers and save the completed PDF
+   prEnd(); # Flush the buffers and save the completed PDF.
 }
 else {
    print $error;
